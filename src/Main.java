@@ -34,7 +34,6 @@ public class Main {
         ArithmeticOperationsEnum operation = numberType.returnArithmeticOperation(input[1]);
         if (numberType.toString().equals("arabicNumber")) {
             answer = numberType.calculation(Integer.parseInt(input[0]), operation, Integer.parseInt(input[2]));
-            if (answer > 0) throw new Exception("т.к. в арабской системе предусмотренны только отрицательные числа");
         } else {
             int number1 = numberType.convertToArithmetic(RomanNumbersEnum.valueOf(input[0]));
             int number2 = numberType.convertToArithmetic(RomanNumbersEnum.valueOf(input[2]));
